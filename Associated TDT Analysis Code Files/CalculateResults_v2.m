@@ -9,8 +9,8 @@ for iStream=1:length(app.Variables.Analyze.StreamsAnalyzed)
         variable=app.Variables.Analyze.VariablesAnalyzed{iVar};
 
         %Select Matlab variable analyzed
-        warning('analyze filtered is hardcoded as "Off"')
-        AnalyzeFiltered=0;
+%         warning('analyze filtered is hardcoded as "Off"')
+        AnalyzeFiltered=AnalyzeFilteredDataCheckBox.Value;
         if strcmp(variable,'LFPs')
             if AnalyzeFiltered
                 streamvariable=getfield(app.Variables,stream,strcat('AverageFiltered',variable(1:end-1),'Data'));
