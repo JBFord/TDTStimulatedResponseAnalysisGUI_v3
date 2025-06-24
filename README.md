@@ -40,12 +40,12 @@ The Load Data tab is used to import new data or load previously imported data. A
   
 
 ![Image](https://github.com/user-attachments/assets/86b60e03-560d-450c-9fc6-43333a28974b)
-### Figure 2. Example detected outlier sweeps. A) An outlier sweep detected based on total deviation from the average signal of the sweep. Top panel shows the outlier sweep (orange) with artifacts (arrows) overlaid on the average of the remaining sweeps (blue).  The bottom panel shows all of the kept sweeps that we not identified as outliers. B) Two outlier sweeps are detected based on the slope of the data between the start and end of the sweeps. Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). Note that the end of the sweep never returns to baseline (arrow).  The bottom panel shows all of the kept sweeps that we not identified as outliers. C) Two outlier sweeps are detected, one based on the total signal (yellow), and one based on the total signal and the slope (orange). Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). The bottom panel shows all of the kept sweeps that we not identified as outliers. In the top panels, blue is always the average of the kept sweeps whereas other colors correspond to the identified outlier sweep listed in the plot title. Information about the stimulation number (unique value given to each recording), the channel, and which sweeps were identified as outliers are shown in the plot title.
+##### Figure 2. Example detected outlier sweeps. A) An outlier sweep detected based on total deviation from the average signal of the sweep. Top panel shows the outlier sweep (orange) with artifacts (arrows) overlaid on the average of the remaining sweeps (blue).  The bottom panel shows all of the kept sweeps that we not identified as outliers. B) Two outlier sweeps are detected based on the slope of the data between the start and end of the sweeps. Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). Note that the end of the sweep never returns to baseline (arrow).  The bottom panel shows all of the kept sweeps that we not identified as outliers. C) Two outlier sweeps are detected, one based on the total signal (yellow), and one based on the total signal and the slope (orange). Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). The bottom panel shows all of the kept sweeps that we not identified as outliers. In the top panels, blue is always the average of the kept sweeps whereas other colors correspond to the identified outlier sweep listed in the plot title. Information about the stimulation number (unique value given to each recording), the channel, and which sweeps were identified as outliers are shown in the plot title.
 
 
 
  ![Image](https://github.com/user-attachments/assets/c7e2e950-6abf-46eb-9844-7f153e3e8d25)
-### Figure 3. Detected broken channel. The total standard deviation across all sweeps within all recordings is plotted as function of channel for one data stream. Broken channels are identified as having much more variability than all other channels (red asterisk).
+##### Figure 3. Detected broken channel. The total standard deviation across all sweeps within all recordings is plotted as function of channel for one data stream. Broken channels are identified as having much more variability than all other channels (red asterisk).
 
 
 
@@ -61,8 +61,8 @@ The Load Data tab is used to import new data or load previously imported data. A
     - **Data Stream check boxes:** Once complete, the data streams in the acquired data will appear as check boxes. Select the check boxes that you wish to import (Fig. 4).
 
 
- 
-Figure 4. View of the GUI once an experiment folder has been chosen. Check boxes with streams of data identified in the first recording, numerically in the TDT tank name, will appear. Selected streams will be imported when “Import Data” is clicked.
+ ![Image](https://github.com/user-attachments/assets/4b8e8937-a8d1-4b07-b060-95a1e4e8db90)
+##### Figure 4. View of the GUI once an experiment folder has been chosen. Check boxes with streams of data identified in the first recording, numerically in the TDT tank name, will appear. Selected streams will be imported when “Import Data” is clicked.
 
 
 
@@ -83,23 +83,23 @@ The goal of this tab is to allow users to explore their data to identify interes
 Use the radio buttons to select a data stream and variable of interest, and use the channel dropdown list to select the channel of the intended analysis window. Input a start and end time for the window, relative to the electrical stimulation artifact. The plot will automatically update based on the window extents. A window start time of zero will include voltage information from the electrical stimulation artifact. Give the window a name and provide analysis information about the polarity of the peak (positive = window maximum, negative = window minimum), and how to calculate the area under the curve (Fig. 5).
 
 
- 
-Figure 5. Parameters has been entered for the analysis window displayed.
+![Image](https://github.com/user-attachments/assets/d92eb66f-e2e5-49be-b4e1-fcd1b54ee708) 
+##### Figure 5. Parameters has been entered for the analysis window displayed.
 
 
 Click the Accept Window button to log the window into Matlab memory. Doing so will update the Defined Windows list. Selecting the window from the Defined Windows list will allow you to see where the window was created (Fig. 6). Performed the previous steps again for the next window (Fig. 7). Multiple windows defined for the same channel, data stream, and variable will all appear on the Defined Windows list, and all can be viewed simultaneously by selecting “All” (Fig. 8). Window colors are randomized. None of the windows will be shown if “Select Window” is highlighted. To delete a defined window, highlight it in the Defined Windows dropdown menu and click the “Delete Selected Window” button. Once all analysis windows are defined, click the “Save Window Information” button to create a .mat file in the AnalysisGUIResults folder. If the folder already contains data for defined windows, the user will be prompted to either overwrite the previous windows or save a new window file with a date and time stamp. Saved windows can be imported using the “Load Window Information” button and selecting the appropriate window save file, which allows users to either continue defining analysis windows or move on to the analysis portion.
  
 
- 
-Figure 6. A defined window is overlaid on the plot when it is selected in the Defined Windows dropdown menu.
+![Image](https://github.com/user-attachments/assets/ce2eae5d-3ad9-4d25-99d3-ad3066aaa903)
+##### Figure 6. A defined window is overlaid on the plot when it is selected in the Defined Windows dropdown menu.
 
 
- 
-Figure 7. The selected Defined Window will not appear if defining a new window outside of the extents of the selected window. Defining a second window will update the Defined Window dropdown list. 
+![Image](https://github.com/user-attachments/assets/ed5c3f69-27d6-4974-8ae0-34f15cc4c82d)
+##### Figure 7. The selected Defined Window will not appear if defining a new window outside of the extents of the selected window. Defining a second window will update the Defined Window dropdown list. 
 
 
- 
-Figure 8. All defined windows will appear for the selected stream and channel if “All” is selected from the Defined Windows list.
+![Image](https://github.com/user-attachments/assets/04d0de38-0d3c-4cfa-bf32-cd2bb2badd2c)
+##### Figure 8. All defined windows will appear for the selected stream and channel if “All” is selected from the Defined Windows list.
 
 
 *Select Windows tab controls*
@@ -127,8 +127,12 @@ Figure 8. All defined windows will appear for the selected stream and channel if
 
 *Analysis Overview*
 Once analysis windows have been defined and saved, the Analyze tab will be selectable (Fig. 9). This tab will be auto-populated with the data streams that were imported and a checkbox will be visible to opt to perform analysis on the filtered data if data was filtered upon import. Users will select all data streams and variables (LFPs and CSDs) that they want analyzed. Currently available analysis metrics include taking the maximum or minimum value within each analysis window (Peak), calculating the area under the curve (Area), finding the maximum first derivative of the data (polarity of the Peak value matters), and finding the maximum second derivative of the data (polarity of the Peak value matters). Clicking the analyze button will apply selected analyses to all selected data and output both a .mat file and a .csv file with the results. 
- 
-Figure 9. Analyze tab becomes available once a window file has been saved.
+
+
+![Image](https://github.com/user-attachments/assets/5e41a5cc-74b7-49b9-b54b-7327640fd7c7)
+##### Figure 9. Analyze tab becomes available once a window file has been saved.
+
+
 
 *Analyze tab controls*
 - **Streams to Analyze:** Select which data streams to analyze. Only data streams with defined windows can be analyzed.
