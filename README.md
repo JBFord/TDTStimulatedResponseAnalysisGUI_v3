@@ -4,6 +4,9 @@ TDT Analysis of Electrically Stimulated Potentials (version 3)
 
 Written by: Jeremy Ford copyright 2023,  GNU Public License v3.0
 
+Please make sure to [cite our paper](https://pubmed.ncbi.nlm.nih.gov/39668560/) if you use this pipeline for your analysis:
+Klein B, Ciesielska A, Losada PM, Sato A, Shah-Morales S, Ford JB, Higashikubo B, Tager D, Urry A, Bombosch J, Chang WC, Andrews-Zwilling Y, Nejadnik B, Warraich Z, Paz JT. Modified human mesenchymal stromal/stem cells restore cortical excitability after focal ischemic stroke in rats. Mol Ther. 2025 Jan 8;33(1):375-400. doi: 10.1016/j.ymthe.2024.12.006. Epub 2024 Dec 11. PMID: 39668560; PMCID: PMC11764858.
+
 Based on an analysis pipeline originally from John Huguenard, Ph.D., Professor of Neurology and Neuological Sciences at Stanford University
 
 Code uses packages provided by [the TDT (Tucker Davis Technologies) API (application programming interface)](https://www.tdt.com/docs/sdk/offline-data-analysis/offline-data-matlab/getting-started/).
@@ -15,6 +18,10 @@ For the purpose of this work, a recording refers to a single TDT tank (folder) t
 This analysis pipeline automatically senses the number of recordings within an experiment folder (a base name for the TDT tank needs to be provided), and for each recording, data streams of interest are chopped up according to the number of sweeps, aligned relative to the electrical stimulation artifact for each sweep, and then sweeps are averaged together. For local field potential recordings (LFPs), the provided electrode spacing can be used to calculate the current source density (CSD). Users can then use the GUI to visualize LFPs and CSDs for each electrode channel across stimulation conditions (stimulation intensities) to define windows of interest over which to analyze the data.
 
 
+# Quick Guide
+
+
+# Full Documentation
 ## Getting started:
 
 Install the GUI app by running the TDTAnalysisGUI_installation app installer file and follow the prompts.
