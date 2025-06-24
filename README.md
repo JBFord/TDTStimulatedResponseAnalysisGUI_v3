@@ -14,12 +14,15 @@ For the purpose of this work, a recording refers to a single TDT tank (folder) t
 
 This analysis pipeline automatically senses the number of recordings within an experiment folder (a base name for the TDT tank needs to be provided), and for each recording, data streams of interest are chopped up according to the number of sweeps, aligned relative to the electrical stimulation artifact for each sweep, and then sweeps are averaged together. For local field potential recordings (LFPs), the provided electrode spacing can be used to calculate the current source density (CSD). Users can then use the GUI to visualize LFPs and CSDs for each electrode channel across stimulation conditions (stimulation intensities) to define windows of interest over which to analyze the data.
 
+
 ## Getting started:
 
 Start the GUI by running TDTAnalysisGUIv3.m .  This will launch the below window (Fig. 1).
  
 ![Image](https://github.com/user-attachments/assets/02b76e0e-f141-4a99-8035-c3ceb6529e70)
 ### Figure 1. Launched analysis GUI.
+
+
 
 ## Load Data tab:
 The Load Data tab is used to import new data or load previously imported data. A dataset consists of all recordings within the experiment. Default field values have been chosen to work with the provided sample data.
@@ -36,13 +39,13 @@ The Load Data tab is used to import new data or load previously imported data. A
     - **Broken channels:** These are detected using the total variation of each channel. The standard deviation of signal in each sweep is calculated, and then summed across all sweeps to get the total deviation within a recording, analyzing each channel separately. The total deviation is then averaged over all recordings in an experiment. This average total deviation is then compared across channels to detect outlier/broken channels (Fig. 3). Broken channels will be excluded from CSD calculation, and missing channels will have their LFPs interpolated to calculate the CSD.
   
 
-Figure 2. Example detected outlier sweeps. A) An outlier sweep detected based on total deviation from the average signal of the sweep. Top panel shows the outlier sweep (orange) with artifacts (arrows) overlaid on the average of the remaining sweeps (blue).  The bottom panel shows all of the kept sweeps that we not identified as outliers. B) Two outlier sweeps are detected based on the slope of the data between the start and end of the sweeps. Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). Note that the end of the sweep never returns to baseline (arrow).  The bottom panel shows all of the kept sweeps that we not identified as outliers. C) Two outlier sweeps are detected, one based on the total signal (yellow), and one based on the total signal and the slope (orange). Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). The bottom panel shows all of the kept sweeps that we not identified as outliers. In the top panels, blue is always the average of the kept sweeps whereas other colors correspond to the identified outlier sweep listed in the plot title. Information about the stimulation number (unique value given to each recording), the channel, and which sweeps were identified as outliers are shown in the plot title.
+![Image](https://github.com/user-attachments/assets/86b60e03-560d-450c-9fc6-43333a28974b)
+### Figure 2. Example detected outlier sweeps. A) An outlier sweep detected based on total deviation from the average signal of the sweep. Top panel shows the outlier sweep (orange) with artifacts (arrows) overlaid on the average of the remaining sweeps (blue).  The bottom panel shows all of the kept sweeps that we not identified as outliers. B) Two outlier sweeps are detected based on the slope of the data between the start and end of the sweeps. Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). Note that the end of the sweep never returns to baseline (arrow).  The bottom panel shows all of the kept sweeps that we not identified as outliers. C) Two outlier sweeps are detected, one based on the total signal (yellow), and one based on the total signal and the slope (orange). Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). The bottom panel shows all of the kept sweeps that we not identified as outliers. In the top panels, blue is always the average of the kept sweeps whereas other colors correspond to the identified outlier sweep listed in the plot title. Information about the stimulation number (unique value given to each recording), the channel, and which sweeps were identified as outliers are shown in the plot title.
 
 
 
- 
-
-Figure 3. Detected broken channel. The total standard deviation across all sweeps within all recordings is plotted as function of channel for one data stream. Broken channels are identified as having much more variability than all other channels (red asterisk).
+ ![Image](https://github.com/user-attachments/assets/c7e2e950-6abf-46eb-9844-7f153e3e8d25)
+### Figure 3. Detected broken channel. The total standard deviation across all sweeps within all recordings is plotted as function of channel for one data stream. Broken channels are identified as having much more variability than all other channels (red asterisk).
 
 
 
