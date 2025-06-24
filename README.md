@@ -6,7 +6,7 @@ Written by: Jeremy Ford copyright 2023,  GNU Public License v3.0
 
 Based on an analysis pipeline originally from John Huguenard, Ph.D., Professor of Neurology and Neuological Sciences at Stanford University
 
-Code uses packages provided by the TDT (Tucker Davis Technologies) API (application programming interface).
+Code uses packages provided by [the TDT (Tucker Davis Technologies) API (application programming interface)](https://www.tdt.com/docs/sdk/offline-data-analysis/offline-data-matlab/getting-started/).
 
 This software will import data gathered using TDT hardware and Synapse software, and allow the user to name channels of interest, define analysis windows, and run calculations over the windows of interest. Information can be saved throughout this process, and can be loaded in the future to re-analyze. This interface is guided so that the user only has access to the next section in the analysis process, and the GUI updates these sections along the way. 
 
