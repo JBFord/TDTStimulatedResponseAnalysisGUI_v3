@@ -20,7 +20,7 @@ This analysis pipeline automatically senses the number of recordings within an e
 Start the GUI by running TDTAnalysisGUIv3.m .  This will launch the below window (Fig. 1).
  
 ![Image](https://github.com/user-attachments/assets/02b76e0e-f141-4a99-8035-c3ceb6529e70)
-### Figure 1. Launched analysis GUI.
+##### Figure 1. Launched analysis GUI.
 
 
 
