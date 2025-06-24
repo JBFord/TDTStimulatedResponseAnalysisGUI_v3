@@ -20,7 +20,7 @@ Start the GUI by running TDTAnalysisGUIv3.m .  This will launch the below window
  
 ![Image](https://github.com/user-attachments/assets/02b76e0e-f141-4a99-8035-c3ceb6529e70)
 
-Figure 1. Launched analysis GUI.
+### Figure 1. Launched analysis GUI.
 
 ## Load Data tab:
 The Load Data tab is used to import new data or load previously imported data. A dataset consists of all recordings within the experiment. Default field values have been chosen to work with the provided sample data.
