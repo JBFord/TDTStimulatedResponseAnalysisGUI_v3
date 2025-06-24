@@ -24,7 +24,7 @@ Figure 1. Launched analysis GUI.
 The Load Data tab is used to import new data or load previously imported data. A dataset consists of all recordings within the experiment. Default field values have been chosen to work with the provided sample data.
 
 *Defining Parameters*
-- Total Number of Channels: Define the number of electrode channels in the TDT recording: Default is 16
+- **Total Number of Channels:** Define the number of electrode channels in the TDT recording: Default is 16
 - Number of Sweeps: Define the number of sweeps (electrical stimulations) per recording. This should be the number of full sweeps based on the “Chopped Window Duration” parameter. Partial sweeps (e.g a Chopped Window Duration of 1 second with the recording ending 0.8 seconds after the final electrical stimulation) will result in an error. Default value is 1.
 - Chopped Window Duration [seconds]: Define the window surrounding the electrical stimulation artifact. The window will be defined so that 5% of the window occurs before the artifact and 95% of the window occurs after the artifact. Default is 1 second.
 - Electrode Spacing [millimeters]: Define the distance between each adjacent electrode channel in the multielectrode array. This assumes a 1-dimensional array with uniform spacing between electrodes. Default is 0.1 mm
