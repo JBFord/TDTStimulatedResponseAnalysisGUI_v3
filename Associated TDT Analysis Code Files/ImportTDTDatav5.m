@@ -246,15 +246,15 @@ if DetectOutliers
     for iNode=1:NumSelectedStreams
         CurrentStream=app.Tree.CheckedNodes(iNode).Text;
         FoundOutliers=cell2table(WriteOutlierCSV(:,:,iNode),'VariableNames',VarNames,'RowNames',RowNamesVar);
-        writetable(FoundOutliers,strcat('Found Outlier Sweeps_',CurrentStream,'.csv'),'WriteRowNames',1,'writevariablenames',1)
+        writetable(FoundOutliers,strcat(app.Variables.SaveFolder,filesep,'Found Outlier Sweeps_',CurrentStream,'.csv'),'WriteRowNames',1,'writevariablenames',1)
 
 
         if ~isempty(getfield(app.Variables,CurrentStream,'Flags','ExcludeChannels'))
             ExcludedTable=table(getfield(app.Variables,CurrentStream,'Flags','ExcludeChannels'),'VariableNames',{'ExludedChannel'});
-            writetable(ExcludedTable,strcat('Excluded and Interpolated Channels_',CurrentStream,'.csv'))
+            writetable(ExcludedTable,strcat(app.Variables.SaveFolder,filesep,'Excluded and Interpolated Channels_',CurrentStream,'.csv'))
         else
             ExcludedTable=table({'none excluded'},'VariableNames',{'ExludedChannel'});
-            writetable(ExcludedTable,strcat('Excluded and Interpolated Channels_',CurrentStream,'.csv'))
+            writetable(ExcludedTable,strcat(app.Variables.SaveFolder,filesep,'Excluded and Interpolated Channels_',CurrentStream,'.csv'))
         end
     end
 end
