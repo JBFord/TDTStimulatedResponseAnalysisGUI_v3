@@ -5,11 +5,11 @@ TDT Analysis of Electrically Stimulated Potentials (version 3)
 Written by: Jeremy Ford copyright 2023,  GNU Public License v3.0
 
 Please make sure to [cite our paper](https://pubmed.ncbi.nlm.nih.gov/39668560/) if you use this pipeline for your analysis:
+
 Klein B, Ciesielska A, Losada PM, Sato A, Shah-Morales S, Ford JB, Higashikubo B, Tager D, Urry A, Bombosch J, Chang WC, Andrews-Zwilling Y, Nejadnik B, Warraich Z, Paz JT. Modified human mesenchymal stromal/stem cells restore cortical excitability after focal ischemic stroke in rats. Mol Ther. 2025 Jan 8;33(1):375-400. doi: 10.1016/j.ymthe.2024.12.006. Epub 2024 Dec 11. PMID: 39668560; PMCID: PMC11764858.
 
-Based on an analysis pipeline originally from John Huguenard, Ph.D., Professor of Neurology and Neuological Sciences at Stanford University
 
-Code uses packages provided by [the TDT (Tucker Davis Technologies) API (application programming interface)](https://www.tdt.com/docs/sdk/offline-data-analysis/offline-data-matlab/getting-started/).
+This code is based on current source density analysis originally from John Huguenard, Ph.D., Professor of Neurology and Neuological Sciences at Stanford University. the code uses packages provided by [the TDT (Tucker Davis Technologies) API (application programming interface)](https://www.tdt.com/docs/sdk/offline-data-analysis/offline-data-matlab/getting-started/).
 
 This software will import data gathered using TDT hardware and Synapse software, and allow the user to name channels of interest, define analysis windows, and run calculations over the windows of interest. Information can be saved throughout this process, and can be loaded in the future to re-analyze. This interface is guided so that the user only has access to the next section in the analysis process, and the GUI updates these sections along the way. 
 
@@ -19,6 +19,17 @@ This analysis pipeline automatically senses the number of recordings within an e
 
 
 # Quick Guide
+
+Install the GUI app by running the TDTAnalysisGUI_installation app installer file and follow the prompts.
+Start the GUI by running the installed App.  You should see the window for importing a new dataset (Fig. 1).
+
+Fill out the appropriate recording parameters for your data and make sure the base name of each TDT tank is correct in the "Base Naming Scheme" field. All default values are appropriate to import the example dataset.  Click the "Select Experiment to Import" button and use the provided dialog box to choose the experiment folder that contains all TDT Tank folders for analysis. Give the code some time to scan the first TDT Tank, after which check boxes will appear showing the data streams that can be analyzed. Select the streams you wish to import, and select if you want the data filtered or outliers detected. Then click the "Import Data" button to start the import. A progress bar will appear and the Select Windows tab will not be available until data is fully imported. 
+
+Use the Select Windows tab to explore the data and define windows over which to analyze. Windows are specific to each data stream and channel. Make sure to click "Accept Window" to add the window to memory. Once completed, click "Save Window Information" to write the windows to a .mat file and move on to analyzing the data.
+
+Select the streams for which analysis windows were created and the variables that you want to analyze. CSDs (current source densities) are the second spatial derivative over the 1-dimensional recording device and provide information about where, spatially, the source and sink of the electrical activity are located. Select the analysis to perform and then click the "Analyze" button. Once complete, results will be saved in a .mat file and a .csv file. All files output from the analysis will be saved in a folder created within the experiment folder called AnalysisGUIResults.
+
+A full breakdown of the functionality of this pipeline and how to control each part is described below.
 
 
 # Full Documentation
