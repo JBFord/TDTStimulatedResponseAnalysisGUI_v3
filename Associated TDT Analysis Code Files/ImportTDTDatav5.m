@@ -206,7 +206,7 @@ for iNode=1:NumSelectedStreams
     app.Variables=setfield(app.Variables,CurrentStream,'CSDData',csd);
     if FilterFlag
         [Filteredcsd]=CalculateCSDv3(getfield(app.Variables,CurrentStream,'AverageFilteredLFPData'),app.Variables.ElectrodeSpacing);
-        app.Variables=setfield(app.Variables,CurrentStream,'FilterdCSDData',Filteredcsd);
+        app.Variables=setfield(app.Variables,CurrentStream,'FilteredCSDData',Filteredcsd);
     end
 end
 %% Save data and update GUI

@@ -16,7 +16,7 @@ for iStream=1:length(app.Variables.Analyze.StreamsAnalyzed)
 
                 NumWindows=length(getfield(app.Variables,variable,channame,'Windows'));
                 if NumWindows==1
-                    NumWindows=length(fieldnames(getfield(app.Variables,variable,channame,'Windows')));
+                    % NumWindows=length(fieldnames(getfield(app.Variables,variable,channame,'Windows')));
                 end
             else
                 NumWindows=0;
@@ -40,7 +40,11 @@ for iStream=1:length(app.Variables.Analyze.StreamsAnalyzed)
 
                     for iResult=1:length(ResultNames)
                         if iResult==1
+                            try
                             OutCell{TableRow,iResult+5}=getfield(app.Variables.Results,stream,variable,channame,{iWin},'WindowName');
+                            catch
+                                keyboard
+                            end
                         elseif strcmp(ResultNames(iResult),'WindowExtents')
                             OutCell{TableRow,iResult+5}=getfield(app.Variables.Results,stream,variable,channame,{iWin},'WindowExtents',{1});
                             OutCell{TableRow,iResult+6}=getfield(app.Variables.Results,stream,variable,channame,{iWin},'WindowExtents',{2});

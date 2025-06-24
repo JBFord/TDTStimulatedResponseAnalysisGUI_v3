@@ -9,7 +9,10 @@ end
 
 for iStim=1:app.Variables.NumStims
     %Load in data
-    LoadName=strcat(app.Variables.BaseName,num2str(iStim));
+    % LoadName=strcat(app.Variables.BaseName,num2str(iStim)); % Old Method of Importing 
+    CurrentFileVal = app.Variables.ImportInfo.ImportSequence(iStim);
+    LoadName = [app.Variables.ImportInfo.ImportContents(find(app.Variables.ImportInfo.ImportFileValues==CurrentFileVal)).folder filesep app.Variables.ImportInfo.ImportContents(find(app.Variables.ImportInfo.ImportFileValues==CurrentFileVal)).name];
+    
     data=SEV2mat(LoadName,'EventName',Stream);
     LFPData=getfield(data,Stream,'data');
     Fs=getfield(data,Stream,'fs');

@@ -1,7 +1,6 @@
 function [OutlierFlag,ExcludeChannel]=AppDetectOutliers(Variables,CurrentStream)
 %Future versions of this code will output ApprovedTraces as
 %linear-detrended data
-
 data=getfield(Variables,CurrentStream,'LFPData');
 time=getfield(Variables,CurrentStream,'timepts');
 Fs=getfield(Variables,CurrentStream,'Fs');
