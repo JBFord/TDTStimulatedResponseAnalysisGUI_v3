@@ -5,6 +5,7 @@ TDT Analysis of Electrically Stimulated Potentials (version 3)
 Written by: Jeremy Ford copyright 2023,  GNU Public License v3.0
 
 Please make sure to [cite our paper](https://pubmed.ncbi.nlm.nih.gov/39668560/) if you use this pipeline for your analysis:
+
 Klein B, Ciesielska A, Losada PM, Sato A, Shah-Morales S, Ford JB, Higashikubo B, Tager D, Urry A, Bombosch J, Chang WC, Andrews-Zwilling Y, Nejadnik B, Warraich Z, Paz JT. Modified human mesenchymal stromal/stem cells restore cortical excitability after focal ischemic stroke in rats. Mol Ther. 2025 Jan 8;33(1):375-400. doi: 10.1016/j.ymthe.2024.12.006. Epub 2024 Dec 11. PMID: 39668560; PMCID: PMC11764858.
 
 
