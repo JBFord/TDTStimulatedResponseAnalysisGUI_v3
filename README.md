@@ -20,7 +20,7 @@ This analysis pipeline automatically senses the number of recordings within an e
 
 # Quick Guide
 
-Install the GUI app by running the TDTAnalysisGUI_installation app installer file and follow the prompts.
+Install the GUI app by running the TDTAnalysisGUIv3 app installer file and follow the prompts.
 Start the GUI by running the installed App.  You should see the window for importing a new dataset appear.
 
 Fill out the appropriate recording parameters for your data and make sure the base name of each TDT tank is correct in the "Base Naming Scheme" field. All default field values have been set for the example dataset.  Click the "Select Experiment to Import" button and use the provided dialog box to choose the experiment folder that contains all TDT Tank folders for analysis (This would be the ExampleData folder for the provided example dataset). Give the code some time to scan the first TDT Tank, after which check boxes will appear showing the data streams that can be analyzed. Select the streams you wish to import and select if you want the data filtered and outliers detected. Then click the "Import Data" button to start the import. A progress bar will appear and the Select Windows tab will not be available until data is fully imported. If detect outliers is selected, plots will appear for each recording and channel that has an outlier.
@@ -35,7 +35,7 @@ A full breakdown of the functionality of this App and how to control each field 
 # Full Documentation
 ## Getting started:
 
-Install the GUI app by running the TDTAnalysisGUI_installation app installer file and follow the prompts.
+Install the GUI app by running the TDTAnalysisGUIv3 app installer file and follow the prompts.
 Start the GUI by running the installed App.  You should see the window for importing a new dataset (Fig. 1).
  
 ![Image](https://github.com/user-attachments/assets/02b76e0e-f141-4a99-8035-c3ceb6529e70)
