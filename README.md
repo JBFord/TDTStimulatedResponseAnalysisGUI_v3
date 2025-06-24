@@ -20,6 +20,7 @@ This analysis pipeline automatically senses the number of recordings within an e
 Start the GUI by running TDTAnalysisGUIv3.m .  This will launch the below window (Fig. 1).
  
 ![Image](https://github.com/user-attachments/assets/02b76e0e-f141-4a99-8035-c3ceb6529e70)
+
 **Figure 1.** Launched analysis GUI.
 
      
@@ -71,6 +72,7 @@ The Load Data tab is used to import new data or load previously imported data. A
 
 
  ![Image](https://github.com/user-attachments/assets/4b8e8937-a8d1-4b07-b060-95a1e4e8db90)
+ 
 **Figure 4.** View of the GUI once an experiment folder has been chosen. Check boxes with streams of data identified in the first recording, numerically in the TDT tank name, will appear. Selected streams will be imported when “Import Data” is clicked.
 
 
@@ -93,6 +95,7 @@ Use the radio buttons to select a data stream and variable of interest, and use 
 
 
 ![Image](https://github.com/user-attachments/assets/d92eb66f-e2e5-49be-b4e1-fcd1b54ee708) 
+
 **Figure 5.** Parameters has been entered for the analysis window displayed.
 
 
