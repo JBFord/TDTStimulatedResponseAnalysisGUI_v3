@@ -9,7 +9,7 @@ Please make sure to [cite our paper](https://pubmed.ncbi.nlm.nih.gov/39668560/) 
 Klein B, Ciesielska A, Losada PM, Sato A, Shah-Morales S, Ford JB, Higashikubo B, Tager D, Urry A, Bombosch J, Chang WC, Andrews-Zwilling Y, Nejadnik B, Warraich Z, Paz JT. Modified human mesenchymal stromal/stem cells restore cortical excitability after focal ischemic stroke in rats. Mol Ther. 2025 Jan 8;33(1):375-400. doi: 10.1016/j.ymthe.2024.12.006. Epub 2024 Dec 11. PMID: 39668560; PMCID: PMC11764858.
 
 
-This code is based on current source density analysis originally from John Huguenard, Ph.D., Professor of Neurology and Neuological Sciences at Stanford University. the code uses packages provided by [the TDT (Tucker Davis Technologies) API (application programming interface)](https://www.tdt.com/docs/sdk/offline-data-analysis/offline-data-matlab/getting-started/).
+This code is based on current source density analysis originally from John Huguenard, Ph.D., Professor of Neurology and Neuological Sciences at Stanford University. The code uses packages provided by [the TDT (Tucker Davis Technologies) API (application programming interface)](https://www.tdt.com/docs/sdk/offline-data-analysis/offline-data-matlab/getting-started/).
 
 This software will import data gathered using TDT hardware and Synapse software, and allow the user to name channels of interest, define analysis windows, and run calculations over the windows of interest. Information can be saved throughout this process, and can be loaded in the future to re-analyze. This interface is guided so that the user only has access to the next section in the analysis process, and the GUI updates these sections along the way. 
 
