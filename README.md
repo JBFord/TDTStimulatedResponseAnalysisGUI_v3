@@ -37,19 +37,16 @@ The Load Data tab is used to import new data or load previously imported data. A
 - **Stimulation Intensities:** The name of this field suggests that the values must be stimulation intensities, but in fact these can be used as unique identifiers for each TDT tank within the experiment folder. Numerical values must be used and this should be a comma separated list. The number of unique identifier values should match the number of TDT tank folders within the experiment folder. The Synapse recording software automatically increments the values following the Tank base name. Tanks are identified by this pipeline and ordered based on their incremented value in the Tank name. Therefore, unique identifiers must be entered into the field to match with the ascending Tank incremental values (e.g. An experiment with Tank names “Rec3” and “Rec5” may have “10, 100” entered into the field to represent that Rec3 is associated with the value 10 and Rec5 is associated with the value 100). These values will be used as identifiers in subsequent plots and exported data, and shown as Stimulation Intensities. In the example data which the pipeline was built for, the experiment consists of recordings applying different electrical stimulation intensities, and so unique identifiers will appear as stimulation intensities in mA in the exported data. Default entry is “10, 20, 50, 100, 200, 300, 400, 500, 600”.
 - **Base Naming Scheme:** Provide the base name for each TDT Tank folder. The pipeline will search the experiment folder for matching Tank names. Tanks will be imported in ascending numerical order using the incremented value following the Base Name.
 - **Detect Outliers checkbox:** Select the Detect Outliers box to automatically detect sweeps with artifacts and broken channels. If sensed, .csv files will be generated that output which sweeps are outliers (based on the stimulation identifier and channel) and output which channel is being excluded and interpolated for CSD calculations.
-    - **Artifact detection:** Two methods are used: 1) Sweeps within a recording are mean centered, and then the total absolute signal is summed for each sweep. Outlier detection is performed to determine if any sweep deviates from the distribution of sweeps based on a threshold of 7 standard deviations away from the mean total signal (Fig. 2A). 2) Each sweep is assessed for a progressively changing baseline offset by fitting a line between the pre stimulation sweep region (first 5% of sweep samples) and the end of the sweep (last 5% of sweep samples). The distribution of slopes for all sweeps is assessed for outliers based on a slope more than 7 standard deviations away from the average slope for all sweeps (Fig. 2B). Both metrics are performed for all channels in each recording. Some sweeps are identified as both slope and difference outliers (Fig. 2C)
-
+    - **Artifact detection:** Two methods are used: 1) Sweeps within a recording are mean centered, and then the total absolute signal is summed for each sweep. Outlier detection is performed to determine if any sweep deviates from the distribution of sweeps based on a threshold of 7 standard deviations away from the mean total signal (Fig. 2A). 2) Each sweep is assessed for a progressively changing baseline offset by fitting a line between the pre stimulation sweep region (first 5% of sweep samples) and the end of the sweep (last 5% of sweep samples). The distribution of slopes for all sweeps is assessed for outliers based on a slope more than 7 standard deviations away from the average slope for all sweeps (Fig. 2B). Both metrics are performed for all channels in each recording. Some sweeps are identified as both slope and difference outliers (Fig. 2C)  
+    - **Broken channels:** These are detected using the total variation of each channel. The standard deviation of signal in each sweep is calculated, and then summed across all sweeps to get the total deviation within a recording, analyzing each channel separately. The total deviation is then averaged over all recordings in an experiment. This average total deviation is then compared across channels to detect outlier/broken channels (Fig. 3). Broken channels will be excluded from CSD calculation, and missing channels will have their LFPs interpolated to calculate the CSD.
+  
+ 
+ 
 
 
 ![Image](https://github.com/user-attachments/assets/86b60e03-560d-450c-9fc6-43333a28974b)
 **Figure 2.** Example detected outlier sweeps. A) An outlier sweep detected based on total deviation from the average signal of the sweep. Top panel shows the outlier sweep (orange) with artifacts (arrows) overlaid on the average of the remaining sweeps (blue).  The bottom panel shows all of the kept sweeps that we not identified as outliers. B) Two outlier sweeps are detected based on the slope of the data between the start and end of the sweeps. Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). Note that the end of the sweep never returns to baseline (arrow).  The bottom panel shows all of the kept sweeps that we not identified as outliers. C) Two outlier sweeps are detected, one based on the total signal (yellow), and one based on the total signal and the slope (orange). Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). The bottom panel shows all of the kept sweeps that we not identified as outliers. In the top panels, blue is always the average of the kept sweeps whereas other colors correspond to the identified outlier sweep listed in the plot title. Information about the stimulation number (unique value given to each recording), the channel, and which sweeps were identified as outliers are shown in the plot title.
 
-
-    
-    - **Broken channels:** These are detected using the total variation of each channel. The standard deviation of signal in each sweep is calculated, and then summed across all sweeps to get the total deviation within a recording, analyzing each channel separately. The total deviation is then averaged over all recordings in an experiment. This average total deviation is then compared across channels to detect outlier/broken channels (Fig. 3). Broken channels will be excluded from CSD calculation, and missing channels will have their LFPs interpolated to calculate the CSD.
-  
- 
- 
  
 
  ![Image](https://github.com/user-attachments/assets/c7e2e950-6abf-46eb-9844-7f153e3e8d25)
@@ -103,14 +100,17 @@ Click the Accept Window button to log the window into Matlab memory. Doing so wi
  
 
 ![Image](https://github.com/user-attachments/assets/ce2eae5d-3ad9-4d25-99d3-ad3066aaa903)
+
 **Figure 6.** A defined window is overlaid on the plot when it is selected in the Defined Windows dropdown menu.
 
 
 ![Image](https://github.com/user-attachments/assets/ed5c3f69-27d6-4974-8ae0-34f15cc4c82d)
+
 **Figure 7.** The selected Defined Window will not appear if defining a new window outside of the extents of the selected window. Defining a second window will update the Defined Window dropdown list. 
 
 
 ![Image](https://github.com/user-attachments/assets/04d0de38-0d3c-4cfa-bf32-cd2bb2badd2c)
+
 **Figure 8.** All defined windows will appear for the selected stream and channel if “All” is selected from the Defined Windows list.
 
 
@@ -142,6 +142,7 @@ Once analysis windows have been defined and saved, the Analyze tab will be selec
 
 
 ![Image](https://github.com/user-attachments/assets/5e41a5cc-74b7-49b9-b54b-7327640fd7c7)
+
 **Figure 9.** Analyze tab becomes available once a window file has been saved.
 
 
