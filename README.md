@@ -22,7 +22,9 @@ Start the GUI by running TDTAnalysisGUIv3.m .  This will launch the below window
 ![Image](https://github.com/user-attachments/assets/02b76e0e-f141-4a99-8035-c3ceb6529e70)
 **Figure 1.** Launched analysis GUI.
 
+     
 
+          
 
 ## Load Data tab:
 The Load Data tab is used to import new data or load previously imported data. A dataset consists of all recordings within the experiment. Default field values have been chosen to work with the provided sample data.
@@ -39,6 +41,9 @@ The Load Data tab is used to import new data or load previously imported data. A
     - **Broken channels:** These are detected using the total variation of each channel. The standard deviation of signal in each sweep is calculated, and then summed across all sweeps to get the total deviation within a recording, analyzing each channel separately. The total deviation is then averaged over all recordings in an experiment. This average total deviation is then compared across channels to detect outlier/broken channels (Fig. 3). Broken channels will be excluded from CSD calculation, and missing channels will have their LFPs interpolated to calculate the CSD.
   
 
+      
+
+         
 ![Image](https://github.com/user-attachments/assets/86b60e03-560d-450c-9fc6-43333a28974b)
 **Figure 2.** Example detected outlier sweeps. A) An outlier sweep detected based on total deviation from the average signal of the sweep. Top panel shows the outlier sweep (orange) with artifacts (arrows) overlaid on the average of the remaining sweeps (blue).  The bottom panel shows all of the kept sweeps that we not identified as outliers. B) Two outlier sweeps are detected based on the slope of the data between the start and end of the sweeps. Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). Note that the end of the sweep never returns to baseline (arrow).  The bottom panel shows all of the kept sweeps that we not identified as outliers. C) Two outlier sweeps are detected, one based on the total signal (yellow), and one based on the total signal and the slope (orange). Top panel shows the outlier sweeps (orange and yellow) overlaid on the average of the remaining sweeps (blue). The bottom panel shows all of the kept sweeps that we not identified as outliers. In the top panels, blue is always the average of the kept sweeps whereas other colors correspond to the identified outlier sweep listed in the plot title. Information about the stimulation number (unique value given to each recording), the channel, and which sweeps were identified as outliers are shown in the plot title.
 
@@ -47,12 +52,14 @@ The Load Data tab is used to import new data or load previously imported data. A
  
 
  ![Image](https://github.com/user-attachments/assets/c7e2e950-6abf-46eb-9844-7f153e3e8d25)
+ 
 **Figure 3.** Detected broken channel. The total standard deviation across all sweeps within all recordings is plotted as function of channel for one data stream. Broken channels are identified as having much more variability than all other channels (red asterisk).
 
+       
 
+        
 
-
-
+       
 - **Filter checkbox:** Check the box to filter the data when it is imported. Fields to define the filter cutoffs will appear. If checked and data is filtered during import, checkboxes will appear later in the pipeline to allow visualization or analysis of filtered data.
     - **High Pass Cutoff:** Define the lower end of the filter’s passband
     - **Low Pass Cutoff:** Define the higher end of the filter’s passband
