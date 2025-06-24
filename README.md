@@ -17,7 +17,8 @@ This analysis pipeline automatically senses the number of recordings within an e
 
 ## Getting started:
 
-Start the GUI by running TDTAnalysisGUIv3.m .  This will launch the below window (Fig. 1).
+Install the GUI app by running the TDTAnalysisGUI_installation app installer file and follow the prompts.
+Start the GUI by running the installed App.  You should see the window for importing a new dataset (Fig. 1).
  
 ![Image](https://github.com/user-attachments/assets/02b76e0e-f141-4a99-8035-c3ceb6529e70)
 
